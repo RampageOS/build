@@ -255,7 +255,7 @@ define add-extended-props
 	DATE="$(DATE_FROM_FILE)" \
 	EXTENDED_VERSION="$(EXTENDED_VERSION)" \
 	EXTENDED_BUILD_TYPE="$(EXTENDED_BUILD_TYPE)" \
-	bash vendor/aosp/build/tools/buildinfo_aex.sh >> $(1)
+	bash vendor/rampage/build/tools/buildinfo_aex.sh >> $(1)
 endef
 
 ifdef property_overrides_split_enabled
@@ -2227,7 +2227,7 @@ $(recovery_ramdisk): $(MKBOOTFS) $(COMPRESSION_COMMAND_DEPS) \
 # $(2): kernel file
 define build-recoveryimage-target
   @echo "Generating Changelog"
-  bash vendor/aosp/tools/changelog "$(PRODUCT_OUT)"
+  bash vendor/rampage/tools/changelog "$(PRODUCT_OUT)"
   $(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/AospExtended-$(EXTENDED_VERSION)-$(shell $(DATE_FROM_FILE) +%Y%m%d-%H%M)-Changelog.txt
   $(if $(filter true,$(PRODUCT_SUPPORTS_VBOOT)), \
     $(MKBOOTIMG) --kernel $(2) $(INTERNAL_RECOVERYIMAGE_ARGS) \
