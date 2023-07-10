@@ -832,7 +832,7 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   script.Print("|################################################|");
   script.Print("|################################################|");
   script.Print("--------------------------------------------------");
-  script.Print("|╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱By:-@prabhat_proxy╱╱╱╱╱╱╱╱╱╱╱╱|");
+  script.Print("|                By:-@prabhat_proxy              |");
   script.Print("--------------------------------------------------");
   script.Print(" ")
   script.AppendExtra("sleep (2);")
