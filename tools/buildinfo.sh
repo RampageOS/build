@@ -14,7 +14,7 @@ echo "ro.build.version.all_codenames=$PLATFORM_VERSION_ALL_CODENAMES"
 echo "ro.build.version.release=$PLATFORM_VERSION_LAST_STABLE"
 echo "ro.build.version.release_or_codename=$PLATFORM_VERSION"
 echo "ro.build.version.security_patch=$PLATFORM_SECURITY_PATCH"
-echo "ro.nusantara.version.security_patch=$PLATFORM_SECURITY_PATCH_NAD"
+echo "ro.nusantara.version.security_patch=$PLATFORM_SECURITY_PATCH_RPG"
 echo "ro.build.version.base_os=$PLATFORM_BASE_OS"
 echo "ro.build.version.min_supported_target_sdk=$PLATFORM_MIN_SUPPORTED_TARGET_SDK_VERSION"
 echo "ro.build.date=`$DATE`"
@@ -55,6 +55,6 @@ if [ -n "$BUILD_THUMBPRINT" ] ; then
   echo "ro.build.thumbprint=$BUILD_THUMBPRINT"
 fi
 
-echo "ro.nad.device=$NAD_DEVICE"
+echo "ro.rpg.device=$RPG_DEVICE"
 
 echo "# end build properties"

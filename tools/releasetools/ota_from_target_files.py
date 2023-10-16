@@ -824,9 +824,9 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("ro.nad.build.date")
+  build_date = target_info.GetBuildProp("ro.rpg.build.date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("ro.nad.device")
+  device = target_info.GetBuildProp("ro.rpg.device")
 
   script.Print("----------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
@@ -1532,12 +1532,13 @@ else if get_stage("%(bcb_dev)s") != "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("ro.nad.build.date")
-  device = target_info.GetBuildProp("ro.nad.device")
+  build_date = target_info.GetBuildProp("ro.rpg.build.date")
+  device = target_info.GetBuildProp("ro.rpg.device")
 
   script.Print("----------------------------------------------");
-  script.Print("              Nusantara Project");
-  script.Print("               by Team Nad");
+  script.Print("                 RampageOS Renegade");
+  script.Print("                by Team PrabhatProxy");
+  script.Print("               based on Nushantra-Rom");
   script.Print("----------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));

@@ -294,8 +294,8 @@ include $(BUILD_SYSTEM)/envsetup.mk
 # See envsetup.mk for a description of SCAN_EXCLUDE_DIRS
 FIND_LEAVES_EXCLUDES := $(addprefix --prune=, $(SCAN_EXCLUDE_DIRS) .repo .git)
 
-ifneq ($(NAD_BUILD),)
-include vendor/nusantara/config/BoardConfigNAD.mk
+ifneq ($(RAMPAGE_BUILD),)
+include vendor/rampage/config/BoardConfigRPG.mk
 endif
 
 # General entries for project pathmap.  Any entries listed here should
@@ -1236,11 +1236,11 @@ dont_bother_goals := out \
     vbmetaimage-nodeps \
     product-graph dump-products
 
-ifneq ($(NAD_BUILD),)
-ifneq ($(wildcard device/nad/sepolicy/common/sepolicy.mk),)
+ifneq ($(RAMPAGE_BUILD),)
+ifneq ($(wildcard device/rpg/sepolicy/common/sepolicy.mk),)
 ## We need to be sure the global selinux policies are included
 ## last, to avoid accidental resetting by device configs
-$(eval include device/nad/sepolicy/common/sepolicy.mk)
+$(eval include device/rpg/sepolicy/common/sepolicy.mk)
 endif
 endif
 

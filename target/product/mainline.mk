@@ -35,6 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     PhotoTable \
 
-ifeq ($(NAD_BUILD),)
+ifeq ($(RAMPAGE_BUILD),)
 PRODUCT_COPY_FILES += device/sample/etc/apns-full-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
 endif

@@ -156,8 +156,8 @@ endif
 
 #
 # -----------------------------------------------------------------
-# Add our NAD properties to the build properties.
-ADDITIONAL_BUILD_PROPERTIES += $(NAD_PROPERTIES)
+# Add our RPG properties to the build properties.
+ADDITIONAL_BUILD_PROPERTIES += $(RPG_PROPERTIES)
 
 # Bring in standard build system definitions.
 include $(BUILD_SYSTEM)/definitions.mk
